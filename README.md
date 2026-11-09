@@ -37,7 +37,7 @@ Cocktail Finder is a web application that helps users discover cocktails using i
 4. Start the server:
 
    ```bash
-   node index.js
+   npm start
    ```
 
 5. Open your browser and visit:
@@ -59,9 +59,11 @@ Project Cocktail-finder/
     ├── error.ejs
     ├── index.ejs
     └── results.ejs
+├── .gitignore
 ├──index.js
 ├── package.json
 ├── package-lock.json
+├── README.md
 ```
 
 ## Author
