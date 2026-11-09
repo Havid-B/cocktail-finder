@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Something Went Wrong</title>
+
+  <!-- Link the error page to the project's stylesheet. -->
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+
+  <!-- Display a heading to indicate that an error has occurred. -->
+  <h1 class="main-heading">Oops!</h1>
+
+  <!-- Display the error message passed from the Express route. -->
+  <p class="no-results"><%= message %></p>
+
+  <!-- Provide a link for users to return to the homepage. -->
+  <div class="buttons">
+    <a href="/">Return to Homepage</a>
+  </div>
+
+</body>
+</html>

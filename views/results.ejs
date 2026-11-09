@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cocktail Search Results</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+
+  <!-- Display the heading passed from the Express route. -->
+  <h1 class="main-heading"><%= heading %></h1>
+
+  <!-- Provide a link for users to return to the homepage. -->
+  <div class="buttons">
+    <a href="/">Back to Home</a>
+  </div>
+
+  <!-- Check whether the API returned any cocktails. -->
+  <% if (cocktails.length > 0) { %>
+
+    <!-- Loop through the cocktail array and create a card for each cocktail. -->
+    <% cocktails.forEach((cocktail) => { %>
+
+      <div class="cocktail-card">
+
+        <!-- Display the cocktail's name. -->
+        <h2><%= cocktail.strDrink %></h2>
+
+        <div class="cocktail-content">
+
+          <!-- Display the cocktail image and use its name as alternative text. -->
+          <img src="<%= cocktail.strDrinkThumb %>" alt="<%= cocktail.strDrink %>" width="200">
+
+          <div class="cocktail-info">
+
+            <!-- Display the cocktail's ingredients and measurements. -->
+            <ul>
+
+              <!-- Loop through the 15 possible ingredient fields provided by the API. -->
+              <% for (let i = 1; i <= 15; i++) { %>
+
+                <!-- Display an ingredient only if that ingredient field contains a value. -->
+                <% if (cocktail["strIngredient" + i]) { %>
+
+                  <li>
+                    <!-- Display the measurement and its corresponding ingredient. -->
+                    <%= cocktail["strMeasure" + i] %>
+                    <%= cocktail["strIngredient" + i] %>
+                  </li>
+
+                <% } %>
+              <% } %>
+
+            </ul>
+
+            <!-- Display the cocktail preparation instructions. -->
+            <h3>Instructions</h3>
+            <p><%= cocktail.strInstructions %></p>
+
+          </div>
+        </div>
+      </div>
+
+    <% }); %>
+
+  <!-- Display a message if no cocktails were found. -->
+  <% } else { %>
+
+    <p class="no-results">
+      Sorry, no cocktails were found. Please try another ingredient.
+    </p>
+
+  <% } %>
+
+</body>
+</html>

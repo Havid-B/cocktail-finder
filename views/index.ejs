@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CockTail Project</title>
+
+  <!-- Link this page to the project's stylesheet. -->
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+
+  <!-- Display the main heading on the homepage. -->
+  <h1 class="main-heading">
+    Discover Your Next Favourite Cocktail
+  </h1>
+
+  <!-- Form for searching cocktails by ingredient. -->
+  <form action="/search" method="GET" class="buttons">
+
+    <!-- Label the input field to tell users what to enter. -->
+    <label for="ingredient">Enter an ingredient:</label>
+
+    <!-- Collect the ingredient entered by the user. -->
+    <input type="text" id="ingredient" name="ingredient" placeholder="lemon" required>
+
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Form for requesting a random cocktail. -->
+  <form action="/random" method="GET" class="buttons">
+    <button type="submit">Surprise Me!</button>
+  </form>
+
+</body>
+</html>

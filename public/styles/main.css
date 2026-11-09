@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #202020;
+  color: #F5F0E8;
+  font-family: 'Poppins', sans-serif;
+}
+.main-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  text-align: center;
+  color: #F5F0E8;
+  margin-top: 80px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+input[type="text"] {
+  padding: 12px 16px;
+  width: 280px;
+  border: 1px solid #D98236;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.buttons button {
+  background-color: #D98236;
+  color: #FFFFFF;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+.buttons button:hover {
+  background-color: #B76524;
+  transition: background-color 0.3s ease;
+}
+
+.buttons a {
+  display: inline-block;
+  background-color: #D98236;
+  color: #FFFFFF;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.buttons a:hover {
+  background-color: #B76524;
+  transition: background-color 0.3s ease;
+}
+
+.cocktail-card {
+  background-color: #F5F0E8;
+  color: #202020;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 750px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+.cocktail-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cocktail-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #B76524;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.cocktail-card ul {
+  padding-left: 25px;
+  line-height: 1.8;
+}
+
+.cocktail-card li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.cocktail-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #B76524;
+  font-size: 22px;
+}
+
+.cocktail-card p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.cocktail-content {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.cocktail-info {
+  flex: 1;
+}
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 30px;
+    margin: 40px 15px 0;
+  }
+
+  .cocktail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cocktail-info {
+    width: 100%;
+  }
+
+  .cocktail-card {
+    margin: 20px 12px;
+    padding: 18px;
+  }
+
+  input[type="text"] {
+    width: 200px;
+  }
+
+  .cocktail-card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.cocktail-card:hover {
+  transform: translateY(-4px);
+}
+.no-results {
+  text-align: center;
+  color: #F5F0E8;
+  font-size: 18px;
+  margin-top: 50px;
+  padding: 20px;
+}
